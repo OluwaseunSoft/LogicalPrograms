@@ -10,11 +10,13 @@ namespace LogicalPrograms
     {
         static void Main(string[] args)
         {
+            Program program = new Program();
+            program.IsPrimeNumber();
         }
 
-        public int IsPrimeNumber(int start, int end)
+        public void IsPrimeNumber()
         {
-
+            int start, end;
             Console.WriteLine("This Program prints the prime numbers in a range of numbers.\n" +
                 "Enter a starting number, and an end number");
             Console.WriteLine("Enter the start number: ");
@@ -22,10 +24,25 @@ namespace LogicalPrograms
             Console.WriteLine("Enter the end number: ");
             end = int.Parse(Console.ReadLine());
             Console.WriteLine($"The Prime Numbers between {start} and {end} are : ");
-            for(int i = start; i <= end; i++)
+            for (int i = start; i <= end; i++)
             {
+                int counter = 0;
+                for (int j = 2; j <= i / 2; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        counter++;
+                        break;
+                    }
+                }
 
+                if (counter == 0 && i != 1)
+                {
+                    Console.WriteLine("{0} ", i);
+                }
             }
+
+            Console.ReadKey();
         }
     }
 }
