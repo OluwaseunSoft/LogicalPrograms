@@ -13,7 +13,7 @@ namespace LogicalPrograms
             Program program = new Program();
             //program.Circle();
             //Console.WriteLine(program.CalculateFactorial(12));
-            program.StrongNumber();
+            program.StrongNumberRange();
         }
 
         public void ReverseString()
@@ -38,7 +38,7 @@ namespace LogicalPrograms
             int quot = number;
             int remainder;
 
-            while(quot != 0)
+            while (quot != 0)
             {
                 remainder = quot % 10;
                 int fact = CalculateFactorial(remainder);
@@ -46,7 +46,7 @@ namespace LogicalPrograms
                 sum = sum + fact;
             }
 
-            if(sum == number)
+            if (sum == number)
             {
                 Console.WriteLine(number + " is a Strong Number");
             }
@@ -54,6 +54,34 @@ namespace LogicalPrograms
             {
                 Console.WriteLine(number + " is not a Strong Number");
             }
+        }
+
+        public void StrongNumberRange()
+        {
+            int number = 0;
+            Console.WriteLine("Enter a number");
+            number = Convert.ToInt32(Console.ReadLine());
+
+            int remainder;
+            Console.WriteLine("Strong Number Numbers Between 1 and " + number + " : ");
+            for(int i = 1; i <= number; i++)
+            {
+                int quot = i, sum = 0;
+                while(quot != 0)
+                {
+                    remainder = quot % 10;
+                    int fact = CalculateFactorial(remainder);
+                    quot = quot / 10;
+                    sum = sum + fact;
+                }
+                if (sum == i)
+                {
+                    Console.WriteLine(i + " ");
+                }
+            }
+           
+
+           
         }
         public int CalculateFactorial(int number)
         {
