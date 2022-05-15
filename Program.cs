@@ -11,8 +11,7 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Program program = new Program();
-            //program.IsPrimeNumber();
-            program.ReverseString();
+            program.Circle();
         }
 
         public void ReverseString()
@@ -25,6 +24,15 @@ namespace LogicalPrograms
                 reverseString = c + reverseString;
             }
             Console.Write($"Reverse String is : {reverseString} ");
+            Console.ReadLine();
+        }
+
+        public void Circle()
+        {
+            Console.WriteLine("Enter Radius: ");
+            double radius = Convert.ToDouble(Console.ReadLine());
+            double area = Math.PI * radius * radius;
+            Console.WriteLine("Area of circle: " + area);
             Console.ReadLine();
         }
 
