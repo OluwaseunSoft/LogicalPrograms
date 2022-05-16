@@ -78,11 +78,10 @@ namespace LogicalPrograms
                 {
                     Console.WriteLine(i + " ");
                 }
-            }
-           
-
-           
+            }   
         }
+
+
         public int CalculateFactorial(int number)
         {
             int fact = 1;
