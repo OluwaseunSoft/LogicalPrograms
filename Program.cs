@@ -11,8 +11,8 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Program program = new Program();
-            //program.Circle();
-            //Console.WriteLine(program.CalculateFactorial(12));
+            program.Circle();
+            Console.WriteLine(program.CalculateFactorial(166));
             program.StrongNumberRange();
         }
 
