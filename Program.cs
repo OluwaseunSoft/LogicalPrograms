@@ -18,7 +18,8 @@ namespace LogicalPrograms
         {
             Console.WriteLine("Enter the number: ");
             int number = int.Parse(Console.ReadLine());
-            int sum = SumOfDigits(number);
+            //int sum = SumOfDigits(number);
+            int sum = number.ToString().Select(digit => int.Parse(digit.ToString())).ToArray().Sum();
 
 
             //while(number > 0)
@@ -33,7 +34,7 @@ namespace LogicalPrograms
 
         static int SumOfDigits(int number)
         {
-            if(number != 0)
+            if (number != 0)
             {
                 return (number % 10 + SumOfDigits(number / 10));
             }
@@ -90,10 +91,10 @@ namespace LogicalPrograms
 
             int remainder;
             Console.WriteLine("Strong Number Numbers Between 1 and " + number + " : ");
-            for(int i = 1; i <= number; i++)
+            for (int i = 1; i <= number; i++)
             {
                 int quot = i, sum = 0;
-                while(quot != 0)
+                while (quot != 0)
                 {
                     remainder = quot % 10;
                     int fact = CalculateFactorial(remainder);
@@ -104,7 +105,7 @@ namespace LogicalPrograms
                 {
                     Console.WriteLine(i + " ");
                 }
-            }   
+            }
         }
 
 
