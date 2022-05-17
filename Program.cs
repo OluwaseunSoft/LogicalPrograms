@@ -11,11 +11,24 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.Circle();
-            Console.WriteLine(program.CalculateFactorial(166));
-            program.StrongNumberRange();
+            program.SumOfNumbers();
         }
 
+        public void SumOfNumbers()
+        {
+            Console.WriteLine("Enter the number: ");
+            int number = int.Parse(Console.ReadLine());
+            int sum = 0, reminder;
+
+            while(number > 0)
+            {
+                reminder = number % 10;
+                sum = sum + reminder;
+                number = number / 10;
+            }
+            Console.WriteLine($"The sum of the digit is: {sum}");
+            Console.ReadKey();
+        }
         public void ReverseString()
         {
             Console.Write("Enter a String : ");
