@@ -18,16 +18,29 @@ namespace LogicalPrograms
         {
             Console.WriteLine("Enter the number: ");
             int number = int.Parse(Console.ReadLine());
-            int sum = 0, reminder;
+            int sum = SumOfDigits(number);
 
-            while(number > 0)
-            {
-                reminder = number % 10;
-                sum = sum + reminder;
-                number = number / 10;
-            }
+
+            //while(number > 0)
+            //{
+            //    reminder = number % 10;
+            //    sum = sum + reminder;
+            //    number = number / 10;
+            //}
             Console.WriteLine($"The sum of the digit is: {sum}");
             Console.ReadKey();
+        }
+
+        static int SumOfDigits(int number)
+        {
+            if(number != 0)
+            {
+                return (number % 10 + SumOfDigits(number / 10));
+            }
+            else
+            {
+                return 0;
+            }
         }
         public void ReverseString()
         {
