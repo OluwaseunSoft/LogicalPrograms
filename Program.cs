@@ -34,12 +34,17 @@ namespace LogicalPrograms
 
         public void SwappingNumber()
         {
-            int number1 = 10, number2 = 20, temp = 0;
+            int number1 = 5, number2 = 3;
+            string name1 = "Seun", name2 = "Akinwale";
             Console.WriteLine($"Before swapping number1 = {number1}, number2 = {number2}");
-            temp = number1;
-            number1 = number2;
-            number2 = temp;
+            //temp = number1;
+            //number1 = number2;
+            //number2 = temp;
+            number1 = number1 * number2;
+            number2 = number1 / number2;
+            number1 = number1 / number2;
             Console.WriteLine($"After swapping number1 = {number1}, number2 = {number2}");
+            Console.WriteLine($"Before swapping name1 = {name1}, name2 = {name2}");
             Console.ReadKey();
         }
 
