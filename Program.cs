@@ -11,7 +11,7 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.SumOfNumbers();
+            program.SwappingNumber();
         }
 
         public void SumOfNumbers()
@@ -29,6 +29,17 @@ namespace LogicalPrograms
             //    number = number / 10;
             //}
             Console.WriteLine($"The sum of the digit is: {sum}");
+            Console.ReadKey();
+        }
+
+        public void SwappingNumber()
+        {
+            int number1 = 10, number2 = 20, temp = 0;
+            Console.WriteLine($"Before swapping number1 = {number1}, number2 = {number2}");
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+            Console.WriteLine($"After swapping number1 = {number1}, number2 = {number2}");
             Console.ReadKey();
         }
 
