@@ -45,6 +45,10 @@ namespace LogicalPrograms
             number1 = number1 / number2;
             Console.WriteLine($"After swapping number1 = {number1}, number2 = {number2}");
             Console.WriteLine($"Before swapping name1 = {name1}, name2 = {name2}");
+            name1 = name1 + name2;
+            name2 = name1.Substring(0, name1.Length - name2.Length);
+            name1 = name1.Substring(name2.Length);
+            Console.WriteLine($"After swapping name1 = {name1}, number2 = {name2}");
             Console.ReadKey();
         }
 
