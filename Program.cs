@@ -18,7 +18,8 @@ namespace LogicalPrograms
         {
             int firstNumber = 0, secondNumber = 1, nextNumber,
                 numberOfElements;
-            Console.WriteLine("Enter the number of elements to print: ");
+            //Console.WriteLine("Enter the number of elements to print: ");
+            Console.WriteLine("Enter the Nth number of the Fibonacci series : ");
             numberOfElements = int.Parse(Console.ReadLine());
             //if(numberOfElements < 2)
             //{
@@ -35,8 +36,23 @@ namespace LogicalPrograms
             //        secondNumber = nextNumber;
             //    }
             //}
-            FibonacciSeriesFn(0, 1, 1, numberOfElements);
+            //FibonacciSeriesFn(0, 1, 1, numberOfElements);
+            numberOfElements = numberOfElements - 1;
+            Console.WriteLine(NthFibonacciNumber(numberOfElements));
             Console.ReadKey();
+        }
+
+        private static int NthFibonacciNumber(int number)
+        {
+            if((number == 0) || (number == 1))
+            {
+                return number;
+            }
+            else
+            {
+                return (NthFibonacciNumber(number - 1) +
+                    NthFibonacciNumber(number - 2));
+            }
         }
 
         public static void FibonacciSeriesFn(int firstNum, int secondNum,
