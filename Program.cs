@@ -11,7 +11,31 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.SwappingNumber();
+            program.FibonacciSeries();
+        }
+
+        public void FibonacciSeries()
+        {
+            int firstNumber = 0, secondNumber = 1, nextNumber,
+                numberOfElements;
+            Console.WriteLine("Enter the number of elements to print: ");
+            numberOfElements = int.Parse(Console.ReadLine());
+            if(numberOfElements < 2)
+            {
+                Console.WriteLine("Please enter a number greater than two");
+            }
+            else
+            {
+                Console.WriteLine(firstNumber + " " + secondNumber);
+                for(int i = 2; i < numberOfElements; i++)
+                {
+                    nextNumber = firstNumber + secondNumber;
+                    Console.WriteLine(nextNumber + " ");
+                    firstNumber = secondNumber;
+                    secondNumber = nextNumber;
+                }
+            }
+            Console.ReadKey();
         }
 
         public void SumOfNumbers()
