@@ -20,22 +20,34 @@ namespace LogicalPrograms
                 numberOfElements;
             Console.WriteLine("Enter the number of elements to print: ");
             numberOfElements = int.Parse(Console.ReadLine());
-            if(numberOfElements < 2)
-            {
-                Console.WriteLine("Please enter a number greater than two");
-            }
-            else
-            {
-                Console.WriteLine(firstNumber + " " + secondNumber);
-                for(int i = 2; i < numberOfElements; i++)
-                {
-                    nextNumber = firstNumber + secondNumber;
-                    Console.WriteLine(nextNumber + " ");
-                    firstNumber = secondNumber;
-                    secondNumber = nextNumber;
-                }
-            }
+            //if(numberOfElements < 2)
+            //{
+            //    Console.WriteLine("Please enter a number greater than two");
+            //}
+            //else
+            //{
+            //    Console.WriteLine(firstNumber + " " + secondNumber);
+            //    for(int i = 2; i < numberOfElements; i++)
+            //    {
+            //        nextNumber = firstNumber + secondNumber;
+            //        Console.WriteLine(nextNumber + " ");
+            //        firstNumber = secondNumber;
+            //        secondNumber = nextNumber;
+            //    }
+            //}
+            FibonacciSeriesFn(0, 1, 1, numberOfElements);
             Console.ReadKey();
+        }
+
+        public static void FibonacciSeriesFn(int firstNum, int secondNum,
+            int counter, int number)
+        {
+            Console.WriteLine(firstNum + " ");
+            if(counter < number)
+            {
+                FibonacciSeriesFn(secondNum, firstNum + secondNum,
+                    counter + 1, number);
+            }
         }
 
         public void SumOfNumbers()
