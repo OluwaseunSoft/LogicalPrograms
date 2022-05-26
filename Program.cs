@@ -11,7 +11,8 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.FibonacciSeries();
+            //program.FibonacciSeries();
+            StackData();
         }
 
         public void FibonacciSeries()
@@ -68,7 +69,23 @@ namespace LogicalPrograms
                 Console.WriteLine(number);
             }
 
+            string[] arrays2 = new string[numbers.Count * 2];
+            numbers.CopyTo(arrays2, numbers.Count);
 
+            Stack<string> stack3 = new Stack<string>(arrays2);
+
+            Console.WriteLine("\nContents of the second copy, with duplicates and nulls: ");
+            foreach(string number in stack3)
+            {
+                Console.WriteLine(number);
+            }
+
+            Console.WriteLine("\nstack2.Contains(\"four\") = {0}", 
+                stack2.Contains("Four"));
+
+            Console.WriteLine("\nstack2.clear()");
+            stack2.Clear();
+            Console.WriteLine("\nstack2.Count = {0}", stack2.Count);
         }
 
         private static int NthFibonacciNumber(int number)
