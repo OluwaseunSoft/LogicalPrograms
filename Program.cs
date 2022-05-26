@@ -42,6 +42,16 @@ namespace LogicalPrograms
             Console.ReadKey();
         }
 
+        public static void StackData()
+        {
+            Stack<string> numbers = new Stack<string>();
+            numbers.Push("One");
+            numbers.Push("Two");
+            numbers.Push("Three");
+            numbers.Push("Four");
+            numbers.Push("Five");
+        }
+
         private static int NthFibonacciNumber(int number)
         {
             if((number == 0) || (number == 1))
