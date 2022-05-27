@@ -22,6 +22,16 @@ namespace LogicalPrograms
             myQ.Enqueue("Hello");
             myQ.Enqueue("World");
             myQ.Enqueue("!");
+
+            Console.WriteLine("myQ");
+            Console.WriteLine("\tCount: {0}", myQ.Count);
+            Console.WriteLine("\tValues:");
+            PrintValues(myQ);
+        }
+
+        private static void PrintValues(IEnumerable myCollection)
+        {
+           foreach()
         }
 
         public void FibonacciSeries()
