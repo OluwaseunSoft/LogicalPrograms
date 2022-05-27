@@ -13,7 +13,7 @@ namespace LogicalPrograms
         {
             Program program = new Program();
             //program.FibonacciSeries();
-            StackData();
+            SampleQueue();
         }
 
         public static void SampleQueue()
@@ -25,7 +25,7 @@ namespace LogicalPrograms
 
             Console.WriteLine("myQ");
             Console.WriteLine("\tCount: {0}", myQ.Count);
-            Console.WriteLine("\tValues:");
+            Console.Write("\tValues:");
             PrintValues(myQ);
         }
 
