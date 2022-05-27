@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,14 @@ namespace LogicalPrograms
             Program program = new Program();
             //program.FibonacciSeries();
             StackData();
+        }
+
+        public static void SampleQueue()
+        {
+            Queue myQ = new Queue();
+            myQ.Enqueue("Hello");
+            myQ.Enqueue("World");
+            myQ.Enqueue("!");
         }
 
         public void FibonacciSeries()
