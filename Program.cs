@@ -31,7 +31,11 @@ namespace LogicalPrograms
 
         private static void PrintValues(IEnumerable myCollection)
         {
-           foreach()
+           foreach(Object obj in myCollection)
+            {
+                Console.Write(" {0}", obj);
+                Console.WriteLine();
+            }
         }
 
         public void FibonacciSeries()
