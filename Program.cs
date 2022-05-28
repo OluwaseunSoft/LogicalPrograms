@@ -29,7 +29,11 @@ namespace LogicalPrograms
             LinkedListNode<string> mark1 = sentence.First;
             sentence.RemoveFirst();
             sentence.AddLast(mark1);
-            Display(sentence, "")
+            Display(sentence, "Test 2: Move first node to be last node: ");
+
+            sentence.RemoveLast();
+            sentence.AddLast("yesterday");
+            Display(sentence, "Test  3: change the last node to 'yesterday': ");
         }
 
         private static void Display(LinkedList<string> words, string test)
