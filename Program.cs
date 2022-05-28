@@ -18,7 +18,19 @@ namespace LogicalPrograms
 
         public static void LinkedListEx()
         {
+            string[] words = { "the", "fox", "jumps", "over", "the", "dog" };
+            LinkedList<string> sentence = new LinkedList<string>(words);
+        }
 
+        private static void Display(LinkedList<string> words, string test)
+        {
+            Console.WriteLine(test);
+            foreach(string word in words)
+            {
+                Console.WriteLine(word + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         public static void SampleQueue()
