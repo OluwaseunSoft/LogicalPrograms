@@ -13,13 +13,23 @@ namespace LogicalPrograms
         {
             Program program = new Program();
             //program.FibonacciSeries();
-            SampleQueue();
+            LinkedListEx();
         }
 
         public static void LinkedListEx()
         {
             string[] words = { "the", "fox", "jumps", "over", "the", "dog" };
             LinkedList<string> sentence = new LinkedList<string>(words);
+            Display(sentence, "The linked list values: ");
+            Console.WriteLine("sentence.Contains(\"jumps\") = {0}", sentence.Contains("jumps"));
+
+            sentence.AddFirst("today");
+            Display(sentence, "Test 1: Add 'today' to the beginning of the list: ");
+
+            LinkedListNode<string> mark1 = sentence.First;
+            sentence.RemoveFirst();
+            sentence.AddLast(mark1);
+            Display(sentence, "")
         }
 
         private static void Display(LinkedList<string> words, string test)
