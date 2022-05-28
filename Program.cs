@@ -16,6 +16,11 @@ namespace LogicalPrograms
             SampleQueue();
         }
 
+        public static void LinkedListEx()
+        {
+
+        }
+
         public static void SampleQueue()
         {
             Queue myQ = new Queue();
