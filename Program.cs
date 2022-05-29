@@ -34,6 +34,15 @@ namespace LogicalPrograms
             sentence.RemoveLast();
             sentence.AddLast("yesterday");
             Display(sentence, "Test  3: change the last node to 'yesterday': ");
+
+            mark1 = sentence.Last;
+            sentence.RemoveLast();
+            sentence.AddFirst(mark1);
+            Display(sentence, "Test 4: Move last node to be first node: ");
+
+            sentence.RemoveFirst();
+            LinkedListNode<string> current = sentence.FindLast("the");
+            IndicateNode(current, "Test 5: Indicate last occurence of 'the':");
         }
 
         private static void IndicateNode(LinkedListNode<string> node, string test)
