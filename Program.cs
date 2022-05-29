@@ -44,6 +44,24 @@ namespace LogicalPrograms
                 Console.WriteLine("Node '{0}' is not in the list.\n", node.Value);
                 return;
             }
+            StringBuilder result = new StringBuilder("(" + node.Value + ")");
+            LinkedListNode<string> nodeP = node.Previous;
+
+            while(nodeP != null)
+            {
+                result.Insert(0, nodeP.Value + " ");
+                nodeP = nodeP.Previous;
+            }
+
+            node = node.Next;
+            while(node != null)
+            {
+                result.Append(" " + node.Value);
+                node = node.Next;
+            }
+
+            Console.WriteLine(result);
+            Console.WriteLine();
         }
 
         private static void Display(LinkedList<string> words, string test)
