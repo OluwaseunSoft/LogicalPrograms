@@ -43,6 +43,22 @@ namespace LogicalPrograms
             sentence.RemoveFirst();
             LinkedListNode<string> current = sentence.FindLast("the");
             IndicateNode(current, "Test 5: Indicate last occurence of 'the':");
+
+            sentence.AddAfter(current, "old");
+            sentence.AddAfter(current, "lazy");
+            IndicateNode(current, "Test 6: Add 'lazy' and 'old' after 'the': ");
+
+            current = sentence.Find("fox");
+            IndicateNode(current, "Test 7: Indicate the 'fox' node: ");
+
+            sentence.AddBefore(current, "quick");
+            sentence.AddBefore(current, "brown");
+            IndicateNode(current, "Test 8: Add 'quick' and 'brown' before 'fox': ");
+
+            mark1 = current;
+            LinkedListNode<string> mark2 = current.Previous;
+            current = sentence.Find("dog");
+            IndicateNode(current, "Test 9: Indicate the 'dog' node: ");
         }
 
         private static void IndicateNode(LinkedListNode<string> node, string test)
