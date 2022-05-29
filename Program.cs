@@ -36,6 +36,16 @@ namespace LogicalPrograms
             Display(sentence, "Test  3: change the last node to 'yesterday': ");
         }
 
+        private static void IndicateNode(LinkedListNode<string> node, string test)
+        {
+            Console.WriteLine(test);
+            if(node.List == null)
+            {
+                Console.WriteLine("Node '{0}' is not in the list.\n", node.Value);
+                return;
+            }
+        }
+
         private static void Display(LinkedList<string> words, string test)
         {
             Console.WriteLine(test);
