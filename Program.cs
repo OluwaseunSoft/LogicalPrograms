@@ -59,6 +59,17 @@ namespace LogicalPrograms
             LinkedListNode<string> mark2 = current.Previous;
             current = sentence.Find("dog");
             IndicateNode(current, "Test 9: Indicate the 'dog' node: ");
+
+            Console.WriteLine("Test 10: Throw exception by adding node (fox) already in the list: ");
+            try
+            {
+                sentence.AddBefore(current, mark1);
+            }
+            catch(InvalidOperationException ex)
+            {
+                Console.WriteLine("Exception message: {0}", ex.Message);
+            }
+            Console.WriteLine();
         }
 
         private static void IndicateNode(LinkedListNode<string> node, string test)
