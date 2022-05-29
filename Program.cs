@@ -70,6 +70,11 @@ namespace LogicalPrograms
                 Console.WriteLine("Exception message: {0}", ex.Message);
             }
             Console.WriteLine();
+
+            sentence.Remove(mark1);
+            sentence.AddBefore(current, mark1);
+            IndicateNode(current, "Test 11: Move a referenced node (fox) before the current node (dog): ");
+
         }
 
         private static void IndicateNode(LinkedListNode<string> node, string test)
