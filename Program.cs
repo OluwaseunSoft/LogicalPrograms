@@ -111,6 +111,7 @@ namespace LogicalPrograms
             foreach(string word in words)
             {
                 Console.WriteLine(word + " " + "");
+                Console.WriteLine(word + " " + "");
             }
             Console.WriteLine();
             Console.WriteLine();
