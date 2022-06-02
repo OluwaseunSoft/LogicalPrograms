@@ -60,7 +60,7 @@ namespace LogicalPrograms
             current = sentence.Find("dog");
             IndicateNode(current, "Test 9: Indicate the 'dog' node: ");
 
-            Console.WriteLine("Test 10: Throw exception by adding node (fox) already in the list: ");
+            Console.WriteLine("Test 10: Throw by adding node (fox) already in the list: ");
             try
             {
                 sentence.AddBefore(current, mark1);
