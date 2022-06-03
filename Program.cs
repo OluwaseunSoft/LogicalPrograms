@@ -146,22 +146,6 @@ namespace LogicalPrograms
             //Console.WriteLine("Enter the number of elements to print: ");
             Console.WriteLine("Enter the Nth number of the Fibonacci series : ");
             numberOfElements = int.Parse(Console.ReadLine());
-            //if(numberOfElements < 2)
-            //{
-            //    Console.WriteLine("Please enter a number greater than two");
-            //}
-            //else
-            //{
-            //    Console.WriteLine(firstNumber + " " + secondNumber);
-            //    for(int i = 2; i < numberOfElements; i++)
-            //    {
-            //        nextNumber = firstNumber + secondNumber;
-            //        Console.WriteLine(nextNumber + " ");
-            //        firstNumber = secondNumber;
-            //        secondNumber = nextNumber;
-            //    }
-            //}
-            //FibonacciSeriesFn(0, 1, 1, numberOfElements);
             numberOfElements = numberOfElements - 1;
             Console.WriteLine(NthFibonacciNumber(numberOfElements));
             Console.ReadKey();
