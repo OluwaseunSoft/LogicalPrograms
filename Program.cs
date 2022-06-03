@@ -243,9 +243,6 @@ namespace LogicalPrograms
             int number1 = 5, number2 = 3;
             string name1 = "Seun", name2 = "Akinwale";
             Console.WriteLine($"Before swapping number1 = {number1}, number2 = {number2}");
-            //temp = number1;
-            //number1 = number2;
-            //number2 = temp;
             number1 = number1 * number2;
             number2 = number1 / number2;
             number1 = number1 / number2;
