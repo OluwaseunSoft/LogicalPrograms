@@ -81,7 +81,22 @@ namespace LogicalPrograms
             IndicateNode(current, "Test 13: Add node removed in test 11 after a referenced node (brown):");
 
             sentence.Remove("old");
-            Display(sentence, "Test 14: Remove node that")
+            Display(sentence, "Test 14: Remove node that has the value 'old':");
+
+            sentence.RemoveLast();
+            ICollection<string> icoll = sentence;
+            icoll.Add("rhinoceros");
+            Display(sentence, "Test 15: Remove last node, cast to ICollection, and add 'rhinoceros': ");
+
+            Console.WriteLine("Test 16: Copy the list to an array: ");
+
+            string[] sArray = new string[sentence.Count];
+            sentence.CopyTo(sArray, 0);
+
+            foreach(string s in sArray)
+            {
+                Console.WriteLine(s);
+            }
 
         }
 
