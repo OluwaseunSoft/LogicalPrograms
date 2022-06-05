@@ -98,6 +98,12 @@ namespace LogicalPrograms
                 Console.WriteLine(s);
             }
 
+            sentence.Clear();
+
+            Console.WriteLine();
+            Console.WriteLine("Test 17: Clear linked list. Contains 'jumps' = {0}", sentence.Contains("jumps"));
+
+            Console.ReadLine();
         }
 
         private static void IndicateNode(LinkedListNode<string> node, string test)
