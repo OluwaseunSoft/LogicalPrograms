@@ -74,6 +74,15 @@ namespace LogicalPrograms
             sentence.AddBefore(current, mark1);
             IndicateNode(current, "Test 11: Move a referenced node (fox) before the current node (dog): ");
 
+            sentence.Remove(current);
+            IndicateNode(current, "Test 12: Remove current node (dog) and attempt to indicate it: ");
+
+            sentence.AddAfter(mark2, current);
+            IndicateNode(current, "Test 13: Add node removed in test 11 after a referenced node (brown):");
+
+            sentence.Remove("old");
+            Display(sentence, "Test 14: Remove node that")
+
         }
 
         private static void IndicateNode(LinkedListNode<string> node, string test)
