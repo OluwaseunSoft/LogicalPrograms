@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,10 +11,7 @@ namespace LogicalPrograms
 {
     class Program
     {
-        public Program()
-        {
-           
-        }
+
         static void Main(string[] args)
         {
             var encryptionKey = "f!rstb@nk";
@@ -23,7 +22,57 @@ namespace LogicalPrograms
             Console.WriteLine(encrypted);
             var decryted = encryptionLibrary.Decrypt(encrypted, encryptionKey);
             Console.WriteLine(decryted);
+
+            var body = @"<!DOCTYPE html><html xmlns='http://www.w3.org/1999/xhtml'>< head >    < meta http - equiv = 'Content-Type' content = 'text/html; charset=UTF-8' />    
+         < meta name = 'viewport' content = 'width=device-width, initial-scale=1.0' />
+        
+            < title >
+                Loan Application Notification
+            </ title >
+        </ head >
+        < body >
+            Dear { Name},
+    < br />
+    < br />
+    Your loan application of { Amount}
+            has been successfully submitted with your account linked to mono. We will review your application and notify you of next steps.This is an automated mail notifying you of successful submission of your loan application.
+    < br />
+    < br />
+    Regards,
+    < br />
+    < small >
+        This is an automated mail and needs no reply
+    </ small >
+</ body >
+</ html >
+";
+            Email(body);
             Console.ReadLine();
+        }
+
+        public static void Email(string htmlString)
+        {
+            try
+            {
+                MailMessage message = new MailMessage();
+                SmtpClient smtp = new SmtpClient();
+                message.From = new MailAddress("senero99@gmail.com");
+                message.To.Add(new MailAddress("akinwaleoluwaseun2015@gmail.com"));
+                message.Subject = "Test";
+                message.IsBodyHtml = true; //to make message body as html  
+                message.Body = htmlString;
+                smtp.Port = 587;
+                smtp.Host = "smtp.gmail.com"; //for gmail host  
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("senero99@gmail.com", "@4123Seun");
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.Send(message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
         }
 
         public static void LinkedListEx()
@@ -75,7 +124,7 @@ namespace LogicalPrograms
             {
                 sentence.AddBefore(current, mark1);
             }
-            catch(InvalidOperationException ex)
+            catch (InvalidOperationException ex)
             {
                 Console.WriteLine("Exception message: {0}", ex.Message);
             }
@@ -104,7 +153,7 @@ namespace LogicalPrograms
             string[] sArray = new string[sentence.Count];
             sentence.CopyTo(sArray, 0);
 
-            foreach(string s in sArray)
+            foreach (string s in sArray)
             {
                 Console.WriteLine(s);
             }
@@ -120,7 +169,7 @@ namespace LogicalPrograms
         private static void IndicateNode(LinkedListNode<string> node, string test)
         {
             Console.WriteLine(test);
-            if(node.List == null)
+            if (node.List == null)
             {
                 Console.WriteLine("Node '{0}' is not in the list.\n", node.Value);
                 return;
@@ -128,14 +177,14 @@ namespace LogicalPrograms
             StringBuilder result = new StringBuilder("(" + node.Value + ")");
             LinkedListNode<string> nodeP = node.Previous;
 
-            while(nodeP != null)
+            while (nodeP != null)
             {
                 result.Insert(0, nodeP.Value + " ");
                 nodeP = nodeP.Previous;
             }
 
             node = node.Next;
-            while(node != null)
+            while (node != null)
             {
                 result.Append(" " + node.Value);
                 node = node.Next;
@@ -148,7 +197,7 @@ namespace LogicalPrograms
         private static void Display(LinkedList<string> words, string test)
         {
             Console.WriteLine(test);
-            foreach(string word in words)
+            foreach (string word in words)
             {
                 Console.WriteLine(word + " " + "");
                 Console.WriteLine(word + " " + "");
@@ -172,7 +221,7 @@ namespace LogicalPrograms
 
         private static void PrintValues(IEnumerable myCollection)
         {
-           foreach(Object obj in myCollection)
+            foreach (Object obj in myCollection)
             {
                 Console.Write(" {0}", obj);
                 Console.WriteLine();
@@ -200,7 +249,7 @@ namespace LogicalPrograms
             numbers.Push("Four");
             numbers.Push("Five");
 
-            foreach(string number in numbers)
+            foreach (string number in numbers)
             {
                 Console.WriteLine(number);
             }
@@ -212,7 +261,7 @@ namespace LogicalPrograms
             Stack<string> stack2 = new Stack<string>(numbers.ToArray());
 
             Console.WriteLine("\nContents of the first copy: ");
-            foreach(string number in stack2)
+            foreach (string number in stack2)
             {
                 Console.WriteLine(number);
             }
@@ -223,12 +272,12 @@ namespace LogicalPrograms
             Stack<string> stack3 = new Stack<string>(arrays2);
 
             Console.WriteLine("\nContents of the second copy, with duplicates and nulls: ");
-            foreach(string number in stack3)
+            foreach (string number in stack3)
             {
                 Console.WriteLine(number);
             }
 
-            Console.WriteLine("\nstack2.Contains(\"four\") = {0}", 
+            Console.WriteLine("\nstack2.Contains(\"four\") = {0}",
                 stack2.Contains("Four"));
 
             Console.WriteLine("\nstack2.clear()");
@@ -238,7 +287,7 @@ namespace LogicalPrograms
 
         private static int NthFibonacciNumber(int number)
         {
-            if((number == 0) || (number == 1))
+            if ((number == 0) || (number == 1))
             {
                 return number;
             }
@@ -253,7 +302,7 @@ namespace LogicalPrograms
             int counter, int number)
         {
             Console.WriteLine(firstNum + " ");
-            if(counter < number)
+            if (counter < number)
             {
                 FibonacciSeriesFn(secondNum, firstNum + secondNum,
                     counter + 1, number);
