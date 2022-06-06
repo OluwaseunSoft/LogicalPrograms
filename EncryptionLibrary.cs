@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace LogicalPrograms
 {
 
-    public static class EncryptionLibrary
+    public class EncryptionLibrary
     {
-        private static byte[] Encrypt(byte[] input, string password)
+        private byte[] Encrypt(byte[] input, string password)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace LogicalPrograms
                 return new byte[0];
             }
         }
-        private static byte[] Decrypt(byte[] input, string password)
+        private byte[] Decrypt(byte[] input, string password)
         {
             try
             {
@@ -45,19 +45,19 @@ namespace LogicalPrograms
                 return new byte[0];
             }
         }
-        public static string Encrypt(string text, string password)
+        public string Encrypt(string text, string password)
         {
             byte[] input = Encoding.UTF8.GetBytes(text);
             byte[] output = Encrypt(input, password);
             return Convert.ToBase64String(output);
         }
-        public static string Decrypt(string text, string password)
+        public string Decrypt(string text, string password)
         {
             byte[] input = Convert.FromBase64String(text);
             byte[] output = Decrypt(input, password);
             return Encoding.UTF8.GetString(output);
         }
-        private static byte[] Transform(byte[] input, ICryptoTransform CryptoTransform)
+        private byte[] Transform(byte[] input, ICryptoTransform CryptoTransform)
         {
             MemoryStream memStream = new MemoryStream();
             CryptoStream cryptStream = new CryptoStream(memStream, CryptoTransform, CryptoStreamMode.Write);

@@ -9,10 +9,21 @@ namespace LogicalPrograms
 {
     class Program
     {
+        private readonly string encryptionKey;
+        public Program()
+        {
+            encryptionKey = ConfigurationUtility.GetAppSettingValue("EncryptionKey");
+        }
         static void Main(string[] args)
         {
             Program program = new Program();
-            LinkedListEx();
+            //LinkedListEx();
+            EncryptionLibrary encryptionLibrary = new EncryptionLibrary();
+            var encrypted = encryptionLibrary.Encrypt("seun", program.encryptionKey);
+            Console.WriteLine(encrypted);
+            var decryted = encryptionLibrary.Decrypt(encrypted, program.encryptionKey);
+            Console.WriteLine(decryted);
+            Console.ReadLine();
         }
 
         public static void LinkedListEx()
