@@ -23,31 +23,13 @@ namespace LogicalPrograms
             var decryted = encryptionLibrary.Decrypt(encrypted, encryptionKey);
             Console.WriteLine(decryted);
 
-            var body = @"<!DOCTYPE html><html xmlns='http://www.w3.org/1999/xhtml'>< head >    < meta http - equiv = 'Content-Type' content = 'text/html; charset=UTF-8' />    
-         < meta name = 'viewport' content = 'width=device-width, initial-scale=1.0' />
-        
-            < title >
-                Loan Application Notification
-            </ title >
-        </ head >
-        < body >
-            Dear { Name},
-    < br />
-    < br />
-    Your loan application of { Amount}
-            has been successfully submitted with your account linked to mono. We will review your application and notify you of next steps.This is an automated mail notifying you of successful submission of your loan application.
-    < br />
-    < br />
-    Regards,
-    < br />
-    < small >
-        This is an automated mail and needs no reply
-    </ small >
-</ body >
-</ html >
-";
-            Email(body);
             Console.ReadLine();
+        }
+
+        public static void ModeChar(string value)
+        {
+            char[] newChar = value.ToCharArray();
+            
         }
 
         public static void Email(string htmlString)
