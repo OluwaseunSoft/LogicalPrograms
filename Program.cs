@@ -29,7 +29,11 @@ namespace LogicalPrograms
         public static void ModeChar(string value)
         {
             char[] newChar = value.ToCharArray();
-            
+            foreach(var oneChar in newChar)
+            {
+                int number = newChar.Where(x => x == oneChar).Count();
+                Console.WriteLine();
+            }
         }
 
         public static void Email(string htmlString)
