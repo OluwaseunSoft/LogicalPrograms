@@ -14,15 +14,11 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-            var encryptionKey = "f!rstb@nk";
+          
             Program program = new Program();
             //LinkedListEx();
-            EncryptionLibrary encryptionLibrary = new EncryptionLibrary();
-            var encrypted = encryptionLibrary.Encrypt("seun", encryptionKey);
-            Console.WriteLine(encrypted);
-            var decryted = encryptionLibrary.Decrypt(encrypted, encryptionKey);
-            Console.WriteLine(decryted);
 
+            ModeChar("aaabbbcccaan");
             Console.ReadLine();
         }
 
@@ -32,7 +28,7 @@ namespace LogicalPrograms
             foreach(var oneChar in newChar)
             {
                 int number = newChar.Where(x => x == oneChar).Count();
-                Console.WriteLine();
+                Console.WriteLine("Char {0} appears {1} times", oneChar, number);
             }
         }
 
