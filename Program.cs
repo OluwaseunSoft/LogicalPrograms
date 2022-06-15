@@ -29,12 +29,12 @@ namespace LogicalPrograms
             foreach (var oneChar in newChar)
             {
                 int number = newChar.Where(x => x == oneChar).Count();
-                if (CharList.ContainsKey(oneChar))
+                if (!CharList.ContainsKey(oneChar))
                     CharList.Add(oneChar, number);               
             }
-            foreach (KeyValuePair())
+            foreach (KeyValuePair<char, int> mode in CharList)
             {
-                Console.WriteLine("Char {0} appears {1} times", CharList.Keys, number);
+                Console.WriteLine("Char {0} appears {1} times", mode.Key, mode.Value);
             }
         }
 
