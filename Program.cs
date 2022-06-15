@@ -24,6 +24,7 @@ namespace LogicalPrograms
 
         public static void ModeChar(string value)
         {
+            Dictionary<string, Int16> CharList = new Dictionary<string, Int16>();
             char[] newChar = value.ToCharArray();
             foreach(var oneChar in newChar)
             {
