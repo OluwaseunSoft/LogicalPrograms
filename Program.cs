@@ -14,7 +14,7 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-          
+
             Program program = new Program();
             //LinkedListEx();
 
@@ -24,12 +24,17 @@ namespace LogicalPrograms
 
         public static void ModeChar(string value)
         {
-            Dictionary<string, Int16> CharList = new Dictionary<string, Int16>();
+            Dictionary<char, int> CharList = new Dictionary<char, int>();
             char[] newChar = value.ToCharArray();
-            foreach(var oneChar in newChar)
+            foreach (var oneChar in newChar)
             {
                 int number = newChar.Where(x => x == oneChar).Count();
-                Console.WriteLine("Char {0} appears {1} times", oneChar, number);
+                if (CharList.ContainsKey(oneChar))
+                    CharList.Add(oneChar, number);               
+            }
+            foreach (KeyValuePair())
+            {
+                Console.WriteLine("Char {0} appears {1} times", CharList.Keys, number);
             }
         }
 
