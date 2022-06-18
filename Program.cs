@@ -14,9 +14,7 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-
-            Program program = new Program();
-            
+            DictionaryDataStruc();
             Console.ReadLine();
         }
 
@@ -28,6 +26,17 @@ namespace LogicalPrograms
             openWith.Add("bmp", "paint.exe");
             openWith.Add("dib", "paint.exe");
             openWith.Add("rtf", "wordpad.exe");
+
+            try
+            {
+                openWith.Add("txt", "winword.exe");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("An element with key = \"txt\" already exists. {0}", ex.Message);
+            }
+
+            Console.WriteLine("For Key = \"rtf\", Value = {0}.", openWith["rtf"]);
         }
 
         public static void ModeChar(string value)
@@ -38,7 +47,7 @@ namespace LogicalPrograms
             {
                 int number = newChar.Where(x => x == oneChar).Count();
                 if (!CharList.ContainsKey(oneChar))
-                    CharList.Add(oneChar, number);               
+                    CharList.Add(oneChar, number);
             }
             foreach (KeyValuePair<char, int> mode in CharList)
             {
