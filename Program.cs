@@ -16,10 +16,18 @@ namespace LogicalPrograms
         {
 
             Program program = new Program();
-            //LinkedListEx();
-
-            ModeChar("aaabbbcccaan");
+            
             Console.ReadLine();
+        }
+
+        public static void DictionaryDataStruc()
+        {
+            Dictionary<string, string> openWith = new Dictionary<string, string>();
+
+            openWith.Add("txt", "notepad.exe");
+            openWith.Add("bmp", "paint.exe");
+            openWith.Add("dib", "paint.exe");
+            openWith.Add("rtf", "wordpad.exe");
         }
 
         public static void ModeChar(string value)
