@@ -37,6 +37,10 @@ namespace LogicalPrograms
             }
 
             Console.WriteLine("For Key = \"rtf\", Value = {0}.", openWith["rtf"]);
+            openWith["rtf"] = "winword.exe";
+            Console.WriteLine("For Key = \"rtf\", Value = {0}.", openWith["rtf"]);
+
+
         }
 
         public static void ModeChar(string value)
