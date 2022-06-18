@@ -31,7 +31,7 @@ namespace LogicalPrograms
             {
                 openWith.Add("txt", "winword.exe");
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("An element with key = \"txt\" already exists. {0}", ex.Message);
             }
@@ -39,7 +39,16 @@ namespace LogicalPrograms
             Console.WriteLine("For Key = \"rtf\", Value = {0}.", openWith["rtf"]);
             openWith["rtf"] = "winword.exe";
             Console.WriteLine("For Key = \"rtf\", Value = {0}.", openWith["rtf"]);
+            openWith["doc"] = "winword.exe";
 
+            try
+            {
+                Console.WriteLine("For key = \"tif\", Value = {0}", openWith["tif"]);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                Console.WriteLine("Key = \"tif\" is not found. {0}", ex.Message);
+            }
 
         }
 
