@@ -14,9 +14,15 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-            DictionaryDataStruc();
+            //DictionaryDataStruc();
             Console.ReadLine();
         }
+
+        public static void BinarySearch()
+        {
+            int[] intArray = new int[10] { 1, 3, 5, 7, 11, 13, 17, 19, 23, 31 };
+
+        } 
 
         public static void DictionaryDataStruc()
         {
