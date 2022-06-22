@@ -24,7 +24,7 @@ namespace LogicalPrograms
             int target = 17;
             int pos = Array.BinarySearch(intArray, target);
             if(pos >= 0)
-                Console.WriteLine($"Item {intArray[pos].ToString()} found at position {pos + 1}. ");
+                Console.WriteLine($"Item {intArray[pos]} found at position {pos + 1}. ");
             else
                 Console.WriteLine("Item not found");
         } 
