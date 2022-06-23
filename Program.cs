@@ -14,7 +14,7 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-            BinarySearch();
+            AngleOfAClock();
             Console.ReadLine();
         }
 
@@ -28,6 +28,11 @@ namespace LogicalPrograms
             double hourInDegrees = (hours * 30) + (minutes * 30.0 / 60);
             double minutesInDegrees = minutes * 6;
             double diff = Math.Abs(hourInDegrees - minutesInDegrees);
+
+            if (diff > 180)
+                diff = 360 - diff;
+            Console.WriteLine($"Angle between {hours} hours and {minutes} minute is {diff} degrees");
+            Console.ReadKey();
         }
 
         public static void BinarySearch()
