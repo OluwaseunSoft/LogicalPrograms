@@ -21,6 +21,11 @@ namespace LogicalPrograms
         public static void AngleOfAClock()
         {
             Console.WriteLine("Enter the hours : ");
+            int hours = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the minutes : ");
+            int minutes = int.Parse(Console.ReadLine());
+
+
         }
 
         public static void BinarySearch()
