@@ -32,7 +32,7 @@ namespace LogicalPrograms
             if (diff > 180)
                 diff = 360 - diff;
             Console.WriteLine($"Angle between {hours} hours and {minutes} minute is {diff} degrees");
-            Console.ReadKey();
+
         }
 
         public static void BinarySearch()
