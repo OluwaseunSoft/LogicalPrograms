@@ -18,16 +18,21 @@ namespace LogicalPrograms
             Console.ReadLine();
         }
 
+        public static void AngleOfAClock()
+        {
+            Console.WriteLine("Enter the hours : ");
+        }
+
         public static void BinarySearch()
         {
             int[] intArray = new int[10] { 1, 3, 5, 7, 11, 13, 17, 19, 23, 31 };
             int target = 17;
             int pos = Array.BinarySearch(intArray, target);
-            if(pos >= 0)
+            if (pos >= 0)
                 Console.WriteLine($"Item {intArray[pos]} found at position {pos + 1}. ");
             else
                 Console.WriteLine("Item not found");
-        } 
+        }
 
         public static void DictionaryDataStruc()
         {
