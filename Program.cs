@@ -25,7 +25,9 @@ namespace LogicalPrograms
             Console.WriteLine("Enter the minutes : ");
             int minutes = int.Parse(Console.ReadLine());
 
-
+            double hourInDegrees = (hours * 30) + (minutes * 30.0 / 60);
+            double minutesInDegrees = minutes * 6;
+            double diff = Math.Abs(hourInDegrees - minutesInDegrees);
         }
 
         public static void BinarySearch()
