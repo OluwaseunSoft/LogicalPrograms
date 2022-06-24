@@ -14,7 +14,7 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-
+            RightCircularArray();
             Console.ReadLine();
         }
 
@@ -32,6 +32,11 @@ namespace LogicalPrograms
                 temp = oneDimesionalArray[0];
                 oneDimesionalArray[0] = oneDimesionalArray[j + 1];
                 oneDimesionalArray[j + 1] = temp;
+            }
+            Console.WriteLine("Array Elements After Right Circular Rotation : ");
+            foreach (int num in oneDimesionalArray)
+            {
+                Console.WriteLine(num + " ");
             }
         }
 
