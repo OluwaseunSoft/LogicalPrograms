@@ -14,7 +14,7 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-           
+
             Console.ReadLine();
         }
 
@@ -22,11 +22,15 @@ namespace LogicalPrograms
         {
             int[] oneDimesionalArray = new int[6];
             Console.WriteLine("Enter the 1D Array Elements : ");
-            for(int i = 0; i < oneDimesionalArray.Length; i++)
+            for (int i = 0; i < oneDimesionalArray.Length; i++)
             {
                 oneDimesionalArray[i] = int.Parse(Console.ReadLine());
             }
+            int temp;
+            for (int j = 0; j < oneDimesionalArray.Length - 1; j++)
+            {
 
+            }
         }
 
         public static void AngleOfAClock()
