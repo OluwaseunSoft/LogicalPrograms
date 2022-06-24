@@ -29,7 +29,9 @@ namespace LogicalPrograms
             int temp;
             for (int j = 0; j < oneDimesionalArray.Length - 1; j++)
             {
-
+                temp = oneDimesionalArray[0];
+                oneDimesionalArray[0] = oneDimesionalArray[j + 1];
+                oneDimesionalArray[j + 1] = temp;
             }
         }
 
