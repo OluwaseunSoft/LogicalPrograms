@@ -14,8 +14,19 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-            AngleOfAClock();
+           
             Console.ReadLine();
+        }
+
+        public static void RightCircularArray()
+        {
+            int[] oneDimesionalArray = new int[6];
+            Console.WriteLine("Enter the 1D Array Elements : ");
+            for(int i = 0; i < oneDimesionalArray.Length; i++)
+            {
+                oneDimesionalArray[i] = int.Parse(Console.ReadLine());
+            }
+
         }
 
         public static void AngleOfAClock()
