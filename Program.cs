@@ -69,6 +69,8 @@ namespace LogicalPrograms
                 Console.WriteLine($"Item {intArray[pos]} found at position {pos + 1}. ");
             else
                 Console.WriteLine("Item not found");
+                Console.WriteLine("Item not found");
+                Console.WriteLine("Item not found");
         }
 
         public static void DictionaryDataStruc()
