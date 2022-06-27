@@ -33,7 +33,8 @@ namespace LogicalPrograms
                 oneDimesionalArray[0] = oneDimesionalArray[j + 1];
                 oneDimesionalArray[j + 1] = temp;
             }
-            Console.WriteLine("Array Elements After Right Circular Rotation : ");
+            Console.WriteLine("Array Elements After Right Circular Rotation " +
+                " Test project: ");
             foreach (int num in oneDimesionalArray)
             {
                 Console.WriteLine(num + " ");
