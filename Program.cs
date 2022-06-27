@@ -38,6 +38,8 @@ namespace LogicalPrograms
             foreach (int num in oneDimesionalArray)
             {
                 Console.WriteLine(num + " ");
+                Console.WriteLine(num + " ");
+                Console.WriteLine(num + " ");
             }
         }
 
