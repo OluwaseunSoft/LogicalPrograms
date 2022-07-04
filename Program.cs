@@ -14,7 +14,7 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-
+            RemoveDuplicateInArray(new int[] { 7, 7, 8, 8, 9, 1, 1, 4, 2, 2 });
             Console.ReadLine();
         }
 
@@ -31,6 +31,12 @@ namespace LogicalPrograms
                 if (arr.Length == j)
                     Console.WriteLine(arr[i] + " ");
             }
+
+            //Step 2
+            Array.Sort(arr);
+            if(arr[0] != arr[1])
+                Console.WriteLine(arr[0] + " ");
+            for()
         }
 
         public static void RightCircularArray()
