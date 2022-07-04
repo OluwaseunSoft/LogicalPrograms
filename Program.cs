@@ -14,9 +14,14 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-            RightCircularArray();
+           
             Console.ReadLine();
         }
+
+        public static void RemoveDuplicateInArray()
+        {
+
+        } 
 
         public static void RightCircularArray()
         {
