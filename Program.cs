@@ -21,22 +21,27 @@ namespace LogicalPrograms
         public static void RemoveDuplicateInArray(int[] arr)
         {
             int i, j = 0;
-            for (i = 0; i < arr.Length; i++)
-            {
-                for (j = 0; j < arr.Length; j++)
-                {
-                    if (i == j) continue;
-                    if (arr[j] == arr[i]) break;
-                }
-                if (arr.Length == j)
-                    Console.WriteLine(arr[i] + " ");
-            }
+            //for (i = 0; i < arr.Length; i++)
+            //{
+            //    for (j = 0; j < arr.Length; j++)
+            //    {
+            //        if (i == j) continue;
+            //        if (arr[j] == arr[i]) break;
+            //    }
+            //    if (arr.Length == j)
+            //        Console.WriteLine(arr[i] + " ");
+            //}
 
+            int n = arr.Length;
             //Step 2
             Array.Sort(arr);
-            if(arr[0] != arr[1])
+            if (arr[0] != arr[1])
                 Console.WriteLine(arr[0] + " ");
-            for()
+            for (i = 1; i < n - 1; i++)
+                if (arr[i] != arr[i + 1] && arr[i] != arr[i - 1])
+                    Console.WriteLine(arr[i] + " ");
+            if (arr[n - 2] != arr[n - 1])
+                Console.WriteLine(arr[n - 1] + " ");
         }
 
         public static void RightCircularArray()
