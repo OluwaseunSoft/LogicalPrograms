@@ -14,14 +14,24 @@ namespace LogicalPrograms
 
         static void Main(string[] args)
         {
-           
+
             Console.ReadLine();
         }
 
-        public static void RemoveDuplicateInArray()
+        public static void RemoveDuplicateInArray(int[] arr)
         {
-
-        } 
+            int i, j = 0;
+            for (i = 0; i < arr.Length; i++)
+            {
+                for (j = 0; j < arr.Length; j++)
+                {
+                    if (i == j) continue;
+                    if (arr[j] == arr[i]) break;
+                }
+                if (arr.Length == j)
+                    Console.WriteLine(arr[i] + " ");
+            }
+        }
 
         public static void RightCircularArray()
         {
@@ -74,8 +84,8 @@ namespace LogicalPrograms
                 Console.WriteLine($"Item {intArray[pos]} found at position {pos + 1}. ");
             else
                 Console.WriteLine("Item not found");
-                Console.WriteLine("Item not found");
-                Console.WriteLine("Item not found");
+            Console.WriteLine("Item not found");
+            Console.WriteLine("Item not found");
         }
 
         public static void DictionaryDataStruc()
