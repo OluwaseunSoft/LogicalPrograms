@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 
 namespace LogicalPrograms
 {
-    class Program
+    public class Program
     {
 
         static void Main(string[] args)
         {
-            RemoveDuplicateInArray(new int[] { 7, 7, 8, 8, 9, 1, 1, 4, 2, 2 });
+
+            LinqTraining.LinqEvenNumber(new int[] { 7, 7, 8, 8, 9, 1, 1, 4, 2, 2 });
             Console.ReadLine();
         }
 
