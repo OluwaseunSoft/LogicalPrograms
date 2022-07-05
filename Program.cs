@@ -15,7 +15,7 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
 
-            LinqTraining.LinqGT5Numbers(new int[] { 7, 7, 8, 8, 9, 1, 1, 4, 2, 2 });
+            LinqTraining.LinqParticularElement(new int[] { 7, 7, 8, 8, 9, 1, 1, 4, 2, 2 });
             Console.ReadLine();
         }
 
