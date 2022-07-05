@@ -8,12 +8,24 @@ namespace LogicalPrograms
 {
     public static class LinqTraining
     {
+
+        public static void LinqGT5Numbers(int[] numbers)
+        {
+            var lowNums = from n in numbers
+                          where n > 5
+                          select n;
+            Console.WriteLine("Print all item where item is greater than 5");
+            foreach (var x in lowNums)
+            {
+                Console.WriteLine(x);
+            }
+        }
         public static void LinqAllNumbers(int[] numbers)
         {
             var lowNums = from n in numbers
                           select n;
             Console.WriteLine("Print all number");
-            foreach(var x in lowNums)
+            foreach (var x in lowNums)
             {
                 Console.WriteLine(x);
             }
