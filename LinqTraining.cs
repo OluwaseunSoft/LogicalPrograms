@@ -10,16 +10,20 @@ namespace LogicalPrograms
     {
         public static void LinqParticularElement(int[] numbers)
         {
-            var lowNums = from n in numbers
-                          where n == 7
-                          select n;
+            var lowNums = (from n in numbers
+                           
+                           select n).GetType();
 
             Console.WriteLine("Select particular item from list");
-
-            foreach (var x in lowNums)
-            {
-                Console.WriteLine(x);
-            }
+            //if(numbers.Length == lowNums.Count())
+            //{
+            //    Console.WriteLine("Number is distinct");
+            //}
+            //foreach (var x in lowNums)
+            //{
+            //    Console.WriteLine(x);
+            //}
+           Console.WriteLine(lowNums);
         }
         public static void LinqGT5Numbers(int[] numbers)
         {
