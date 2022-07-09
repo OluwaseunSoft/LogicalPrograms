@@ -10,22 +10,22 @@ namespace LogicalPrograms
     {
         public static void LinqParticularElement(int[] numbers)
         {
-            var lowNums = numbers.Where(p => p >= 12);
+            var lowNums = numbers.Where(p => p <= 12);
                 //(from n in numbers
                            
                         //   select n).Max();
 
             Console.WriteLine("Select particular item from list");
-            //if(numbers.Length == lowNums.Count())
+            //if (numbers.Length == lowNums.Count())
             //{
             //    Console.WriteLine("Number is distinct");
             //}
-            //foreach (var x in lowNums)
-            //{
-            //    Console.WriteLine(x);
-            //}
+            foreach (var x in lowNums)
+            {
+                Console.WriteLine(x);
+            }
 
-           Console.WriteLine(lowNums.ToString());
+            Console.WriteLine(lowNums.ToString());
         }
         public static void LinqGT5Numbers(int[] numbers)
         {
