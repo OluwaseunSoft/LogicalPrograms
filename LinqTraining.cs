@@ -10,9 +10,10 @@ namespace LogicalPrograms
     {
         public static void LinqParticularElement(int[] numbers)
         {
-            var lowNums = (from n in numbers
+            var lowNums = numbers.Where(p => p >= 12);
+                //(from n in numbers
                            
-                           select n).GetType();
+                        //   select n).Max();
 
             Console.WriteLine("Select particular item from list");
             //if(numbers.Length == lowNums.Count())
@@ -23,7 +24,8 @@ namespace LogicalPrograms
             //{
             //    Console.WriteLine(x);
             //}
-           Console.WriteLine(lowNums);
+
+           Console.WriteLine(lowNums.ToString());
         }
         public static void LinqGT5Numbers(int[] numbers)
         {
