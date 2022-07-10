@@ -15,7 +15,7 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
 
-            LinqTraining.PrimeNumber(2);
+            LinqTraining.CharacterFrequency("Hello and Welcome to Dotnet Tutorials");
             Console.ReadLine();
         }
 
