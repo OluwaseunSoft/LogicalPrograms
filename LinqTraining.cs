@@ -26,16 +26,20 @@ namespace LogicalPrograms
             //}
 
             //using dictionary
-            Dictionary<char, int> dict = new Dictionary<char, int>();
-            foreach (char ch in message)
-            {
-                if (dict.ContainsKey(ch)) dict[ch] = dict[ch] + 1;
-                else dict.Add(ch, 1);
-            }
-            foreach (var item in dict.Keys)
-            {
-                Console.WriteLine(item + " : " + dict[item]);
-            }
+            //Dictionary<char, int> dict = new Dictionary<char, int>();
+            //foreach (char ch in message)
+            //{
+            //    if (dict.ContainsKey(ch)) dict[ch] = dict[ch] + 1;
+            //    else dict.Add(ch, 1);
+            //}
+            //foreach (var item in dict.Keys)
+            //{
+            //    Console.WriteLine(item + " : " + dict[item]);
+            //}
+
+            //using linq group by method
+            Dictionary<char, int> dict = message.GroupBy(c => c).ToDictionary(gr => gr.Key, gr => gr.Count());
+            foreach (var item in dict.Keys) Console.WriteLine(item + " : " + dict[item]);
         }
 
         public static void LinqParticularElement(int[] numbers)
