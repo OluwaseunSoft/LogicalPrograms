@@ -8,6 +8,16 @@ namespace LogicalPrograms
 {
     public static class LinqTraining
     {
+        public static void CharacterFrequency(string message)
+        {
+            message = message.Replace(" ", string.Empty);
+
+            while(message.Length > 0)
+            {
+
+            }
+        }
+
         public static void LinqParticularElement(int[] numbers)
         {
             var lowNums = numbers.Where(p => p <= 12);
@@ -51,7 +61,6 @@ namespace LogicalPrograms
 
         public static void PrimeNumber(int number)
         {
-            bool isPrime = false;
             if (number % 2 != 0)
             {
                 Console.WriteLine("{0} is a prime number", number);

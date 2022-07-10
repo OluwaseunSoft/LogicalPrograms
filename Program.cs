@@ -16,8 +16,6 @@ namespace LogicalPrograms
         {
 
             LinqTraining.PrimeNumber(2);
-            LinqTraining.PrimeNumber(19);
-            LinqTraining.PrimeNumber(13);
             Console.ReadLine();
         }
 
