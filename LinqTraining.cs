@@ -11,9 +11,9 @@ namespace LogicalPrograms
         public static void LinqParticularElement(int[] numbers)
         {
             var lowNums = numbers.Where(p => p <= 12);
-                //(from n in numbers
-                           
-                        //   select n).Max();
+            //(from n in numbers
+
+            //   select n).Max();
 
             Console.WriteLine("Select particular item from list");
             //if (numbers.Length == lowNums.Count())
@@ -46,6 +46,19 @@ namespace LogicalPrograms
             foreach (var x in lowNums)
             {
                 Console.WriteLine(x);
+            }
+        }
+
+        public static void PrimeNumber(int number)
+        {
+            bool isPrime = false;
+            if (number % 2 != 0)
+            {
+                Console.WriteLine("{0} is a prime number", number);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a prime number", number);
             }
         }
 

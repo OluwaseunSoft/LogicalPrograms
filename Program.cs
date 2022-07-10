@@ -15,7 +15,9 @@ namespace LogicalPrograms
         static void Main(string[] args)
         {
 
-            LinqTraining.LinqParticularElement(new int[] { 7, 7, 8, 8, 9, 1, 1, 4, 2, 2 });
+            LinqTraining.PrimeNumber(2);
+            LinqTraining.PrimeNumber(19);
+            LinqTraining.PrimeNumber(13);
             Console.ReadLine();
         }
 
