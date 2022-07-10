@@ -10,18 +10,31 @@ namespace LogicalPrograms
     {
         public static void CharacterFrequency(string message)
         {
-            message = message.Replace(" ", string.Empty);
+            message = message.Replace(" ", string.Empty).ToLower();
 
-            while (message.Length > 0)
+            //using loop
+            //while (message.Length > 0)
+            //{
+            //    Console.Write(message[0] + " : ");
+            //    int count = 0;
+            //    for (int j = 0; j < message.Length; j++)
+            //    {
+            //        if (message[0] == message[j]) count++;
+            //    }
+            //    Console.WriteLine(count);
+            //    message = message.Replace(message[0].ToString(), string.Empty);
+            //}
+
+            //using dictionary
+            Dictionary<char, int> dict = new Dictionary<char, int>();
+            foreach (char ch in message)
             {
-                Console.Write(message[0] + " : ");
-                int count = 0;
-                for (int j = 0; j < message.Length; j++)
-                {
-                    if (message[0] == message[j]) count++;
-                }
-                Console.WriteLine(count);
-                message = message.Replace(message[0].ToString(), string.Empty);
+                if (dict.ContainsKey(ch)) dict[ch] = dict[ch] + 1;
+                else dict.Add(ch, 1);
+            }
+            foreach (var item in dict.Keys)
+            {
+                Console.WriteLine(item + " : " + dict[item]);
             }
         }
 
